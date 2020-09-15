@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css?family=Scope+One|Bitter');
+
+/*
+color palette:
+
+dark brown #4e342e
+oxblood #76323f
+chalkboard #565656
+sky blue #caebf2
+papyrus #fcfaf5
+fossil #d7cec7
+
+*/
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	font-family: "Scope One", serif;
+	font-size: 18px;
+	overflow: hidden;
+}
+
+.wrapper {
+	height: 100%;
+	width: 100%;
+	background: #fcfaf5;
+}
+
+h1 {
+	font-family: "Bitter", serif;
+	font-size: 30px;
+	text-align: center;
+	color:#76323f;
+
+	padding: 40px 15px 15px;
+}
+
+span, p {
+	text-align: left;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+span.italic {
+	font-style: italic;
+}
+
+
+span.number {
+	display: inline-block;
+	float: left;
+	padding-right: 10px;
+
+	font-family: 'Bitter', serif;
+	font-size: 22px;
+	color: #76323f;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+}
+
+label {
+    display: block;
+	text-align: center;
+}
+
+input {
+    font-family: 'Scope One',serif;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+
+    padding: 12px 20px;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input:focus {
+    border: 3px solid #555;
+}
+
+button {
+    font-family: 'Bitter',serif;
+    font-size: 18px;
+    cursor: pointer;
+
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+button:hover {
+    background-color: #555;
+    color: #CCC;
+}
+
+/********** name input **********/
+
+
+.input form {
+	width: 100%;
+	text-align: center;
+}
+
+.input div {
+	display: inline-block;
+	padding: 20px;
+}
+
+.input input {
+	width: 140px;
+    margin: 8px 0;
+    border: 3px solid #ccc;
+}
+
+.input input:focus {
+    border: 3px solid #555;
+}
+
+.input button {
+    width: 100px;
+
+}
+
+.input button:hover {
+    background-color: #555;
+    color: #CCC;
+}
+
+
+/********** instructor message **********/
+
+.message {
+	display: none;
+	background-color: #fcfaf5;
+	text-align: center;
+}
+
+.message hr {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.message div {
+	width: 370px;
+	padding-bottom: 40px; 
+	margin: 0 auto;
+}
+
+
+/********** instructions **********/
+
+.instructions {
+	display: none;
+	background-color: #fcfaf5;
+	text-align: center;
+}
+
+.instructions hr {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.instructions div {
+	width: 370px;
+	padding-bottom: 40px; 
+	margin: 0 auto;
+}
+
+/********** game page **********/
+
+.game {
+	display: none;
+
+}
+
+#gameBoard {
+	display: none;
+}
+
+#coinToss div {
+	padding-top: 190px;
+}
+
+
+.game button {
+	display: block;
+	margin: 0 auto;
+}
+
+#restartButton {
+	margin-top: 50px; 
+}
+
+.panels {
+	text-align: center;
+	width: 500px;
+	margin: 0 auto;
+}
+
+#playerOnePanel, #playerTwoPanel {
+	min-width: 180px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	padding: 20px;
+}
+
+.off {
+	z-index: 0;
+	position: absolute;
+	height: 50px;
+	width: 190px;
+	background-color: #d7cec7;
+	border-radius: 25px;
+	margin: -75px 0 0 -500px;
+	-webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.left {
+	z-index: 0;
+	position: absolute;
+	height: 50px;
+	width: 190px;
+	background-color: #d7cec7;
+	border-radius: 25px;
+	margin: -75px 0 0 -500px;
+	-webkit-transition: 0.5s;
+    transition: 0.5s;
+	margin: -75px 0 0 39px;
+}
+
+.right {
+	z-index: 0;
+	position: absolute;
+	height: 50px;
+	width: 190px;
+	background-color: #d7cec7;
+	border-radius: 25px;
+	margin: -75px 0 0 -500px;
+	-webkit-transition: 0.5s;
+    transition: 0.5s;
+	margin: -75px 0 0 269px;
+}
+
+.piece {
+	cursor: pointer;
+	z-index: 2;
+	position: absolute;
+	border-radius: 50%;
+	height: 70px;
+	width: 70px;			
+	-webkit-transition: all .2s linear;
+	transition: all .2s linear;
+}
+
+.playerOnePiece {
+	background-image: -webkit-linear-gradient(top, #f7f7f7, #f4f1ee);
+	background-image: linear-gradient(top, #f7f7f7, #f4f1ee);
+	box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, .3), 
+				inset 0px 4px 1px 1px #fff, 
+				inset 0px -3px 1px 1px rgba(204,198,197,.5);
+}
+.playerTwoPiece {
+	background-image: -webkit-linear-gradient(top, #6f6d6d, #3e3e3e);
+	background-image: linear-gradient(top, #6f6d6d, #3e3e3e);
+	box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.3), 
+				inset 0px 4px 1px 1px #7b7b7b, 
+				inset 0px -3px 1px 1px rgba(47, 47, 47, 0.5);
+}
+
+.holder {
+	height: 90px;
+	-webkit-transition: all .2s linear;
+	transition: all .2s linear;
+}
+
+.board{
+	background-color: #d7cec7;
+	position: relative;
+	height: 450px;
+	width: 450px;
+	border-radius: 40px;
+	margin: 0 auto;
+}
+
+.row {
+}
+
+.space {
+	cursor: pointer;
+	display: inline-block;
+	background-color: #565656;
+
+	/* length of one edge should be 147px */
+	margin: 68px;
+	height: 11px;
+	width: 11px;
+
+	border-radius: 50%;
+}
+
+.space:hover {
+	background-color: #76323f;
+}
+
+
+/********** restart modal **********/
+
+.restart {
+	background-color: red;
+	display: none;
+}
+
+
+
+
+
